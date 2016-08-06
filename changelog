@@ -128,8 +128,6 @@ Version 1.13.5+dev:
    * Fixed issues with using [endlevel] in victory/defeat events
    * The {MAGENTA_IS_THE_TEAM_COLOR} macro is no longer needed in [unit_type]
      It is now the default behaviour unless overridden with the flag_rgb key.
-   * New key type_tree in unit filters - similar to type, but also matches any
-     possible advancements of the specified unit types.
    * [options][combo] in [scenario], [modifications], etc has been renamed
      to [choice] (which is more accurate). The old name still works for now.
    * ~ADJUST_ALPHA() image path function now takes a WFL formula. It can access
@@ -160,6 +158,13 @@ Version 1.13.5+dev:
      * bit32 functions removed
      * utf8 support added
    * Added new function wesnoth.fire_event_by_id to fire an event with a given ID.
+   * New keys in standard unit filters:
+     * type_tree - similar to type, but also matches any possible advancements
+       of the specified unit types.
+     * ability_type - matches if the unit has any ability of the specified
+       type (tag name).
+   * Added new functions wesnoth.fire_event_by_id and fire_event_by_name. The
+     old function wesnoth.fire_event is now an alias for wesnoth.fire_event_by_name
    * Added new function wesnoth.remove_modifications, which removes applied
      modifications of the chosen type from a unit. The most efficient use is to
      remove all modifications with a specific duration value.
