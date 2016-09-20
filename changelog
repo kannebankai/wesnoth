@@ -192,6 +192,8 @@ Version 1.13.5+dev:
      the next valid index), or removed (by setting a field to nil).
    * wesnoth.show_message_dialog supports second_portrait and second_mirror keys
      in its first argument, which produces a dialog with two portraits.
+   * wesnoth.scroll_to_tile now accepts a third boolean argument - if true, the scroll
+     is skipped when the tile is already visible onscreen.
    * The callable userdata returned by wesnoth.textdomain can now be called with
      an additional two parameters (a plural string and a count) in order to support
      gettext plurals.
